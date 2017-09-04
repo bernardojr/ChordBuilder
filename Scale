@@ -1,0 +1,15 @@
+<html>
+<body>
+    <input type="text" id="Scale"=> Write scale. </br> Scales are formatted : </br> C major triad </br> C major 7 </br> C major 3rd, etc</input>
+    <button onclick="test()">Submit</button>
+    <script>
+        function test()
+        {
+        
+                document.write(output)
+        }
+   
+   
+    </script>
+</body>
+</html>
