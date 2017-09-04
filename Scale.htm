@@ -1,6 +1,7 @@
 <html>
     <body>
         <select id=KeyInput></select>
+        <select id=ChordInput></select>
         <!-- <input type="text" id="KeyInput"=> Write key.</input> -->
         <!-- <input type="text" id="ChordInput"=> Write chord.</input> -->
         <button onclick="test()">Submit</button>
@@ -59,6 +60,14 @@
                 opt.value = scale;
                 opt.innerHTML = scale;
                 keyInput.appendChild(opt);
+            }
+
+            var chordInput = document.getElementById("ChordInput");
+            for (var Chord in ChordType) {
+                var opt2 = document.createElement('option');
+                opt2.value - chord;
+                opt2.innerHTML = chord;
+                chordInput.appendChild(opt2)
             }
     
         </script>
