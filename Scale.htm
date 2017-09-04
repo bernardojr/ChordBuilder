@@ -1,46 +1,15 @@
 <html>
     <body>
-        <select>
-            <option value="Item 1">Item 1</option>
-            <option value="Item 2">Item 2</option>
-            <option value="Item 3">Item 3</option>
-            <option value="Item 4">Item 4</option>
-        </select>
+        <select id=KeyInput></select>
         <!-- <input type="text" id="KeyInput"=> Write key.</input> -->
         <!-- <input type="text" id="ChordInput"=> Write chord.</input> -->
         <button onclick="test()">Submit</button>
         <div id="NoteOutput"></div> 
         <p> Chords are formatted : </br> Triad </br> 7 </br> 5 Chord, etc </p>
-        <script>
+        <script> 
+
             function test() {
 
-                var ChordType = {};
-                ChordType["Triad"] = [1, 3, 5];
-                ChordType["Second"] = [1, 2];
-                // ChordType["2nd"] = | Make this use chordType["Second"] 
-                ChordType["Third"] = [1, 3];
-                ChordType["Fourth"] = [1, 4];
-                ChordType["Fifth"] = [1, 5];
-                ChordType["Sixth"] = [1, 6];
-                ChordType["Seventh"] = [1, 7];
-                ChordType["2 chord"] = [2, 4, 6];
-                ChordType["3 chord"] = [3, 5, 7];
-                ChordType["4 chord"] = [4, 6, 8];
-                ChordType["5 chord"] = [5, 7, 2];
-                ChordType["6 chord"] = [6, 8, 3];
-                ChordType["7 chord"] = [7, 8, 4];
-                ChordType["7"] = [1, 3, 5, 7];
-                ChordType["Scale"] = [1, 2, 3, 4, 5, 6, 7, 8]
-            
-                var scales = {};
-                scales["C"] = ["C", "D", "E", "F", "G", "A", "B", "C"];
-                scales["D"] = ["D", "E", "F#", "G", "A", "B", "C#", "D"];
-                scales["E"] = ["E", "F#", "G#", "A", "B", "C#", "D", "E"];
-                scales["F"] = ["F", "G", "A", "Bb", "C", "D", "E", "F"];
-                scales["G"] = ["G", "A", "B", "C", "D", "E", "F#", "G"];
-                scales["A"] = ["A", "B", "C#", "D", "E", "F#", "G#", "A"];
-                scales["B"] = ["B", "C#", "D#", "E", "F#", "G#", "A#", "B"];
-    
                 var Chord = document.getElementById("ChordInput").value;
 
                 var Scale = document.getElementById("KeyInput").value;
@@ -55,6 +24,42 @@
                 }
             }
     
+    
+            var ChordType = {};
+            ChordType["Triad"] = [1, 3, 5];
+            ChordType["Second"] = [1, 2];
+            // ChordType["2nd"] = | Make this use chordType["Second"] 
+            ChordType["Third"] = [1, 3];
+            ChordType["Fourth"] = [1, 4];
+            ChordType["Fifth"] = [1, 5];
+            ChordType["Sixth"] = [1, 6];
+            ChordType["Seventh"] = [1, 7];
+            ChordType["2 chord"] = [2, 4, 6];
+            ChordType["3 chord"] = [3, 5, 7];
+            ChordType["4 chord"] = [4, 6, 8];
+            ChordType["5 chord"] = [5, 7, 2];
+            ChordType["6 chord"] = [6, 8, 3];
+            ChordType["7 chord"] = [7, 8, 4];
+            ChordType["7"] = [1, 3, 5, 7];
+            ChordType["Scale"] = [1, 2, 3, 4, 5, 6, 7, 8]
+        
+            var scales = {};
+            scales["C"] = ["C", "D", "E", "F", "G", "A", "B", "C"];
+            scales["D"] = ["D", "E", "F#", "G", "A", "B", "C#", "D"];
+            scales["E"] = ["E", "F#", "G#", "A", "B", "C#", "D", "E"];
+            scales["F"] = ["F", "G", "A", "Bb", "C", "D", "E", "F"];
+            scales["G"] = ["G", "A", "B", "C", "D", "E", "F#", "G"];
+            scales["A"] = ["A", "B", "C#", "D", "E", "F#", "G#", "A"];
+            scales["B"] = ["B", "C#", "D#", "E", "F#", "G#", "A#", "B"];
+
+
+            var keyInput = document.getElementById("KeyInput");
+            for (var scale in scales) {
+                var opt = document.createElement('option');
+                opt.value = scale;
+                opt.innerHTML = scale;
+                keyInput.appendChild(opt);
+            }
     
         </script>
     </body>
