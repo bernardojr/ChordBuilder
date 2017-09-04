@@ -1,9 +1,9 @@
 <html>
     <body>
-        <select id=KeyInput></select>
+        <select id=KeyInput></select> 
         <select id=ChordInput></select>
         <!-- <input type="text" id="KeyInput"=> Write key.</input> -->
-        <!-- <input type="text" id="ChordInput"=> Write chord.</input> -->
+         <!-- <input type="text" id="ChordInput"=> Write chord.</input> -->
         <button onclick="test()">Submit</button>
         <div id="NoteOutput"></div> 
         <p> Chords are formatted : </br> Triad </br> 7 </br> 5 Chord, etc </p>
@@ -63,11 +63,12 @@
             }
 
             var chordInput = document.getElementById("ChordInput");
-            for (var Chord in ChordType) {
-                var opt2 = document.createElement('option');
-                opt2.value - chord;
-                opt2.innerHTML = chord;
-                chordInput.appendChild(opt2)
+            for (var chord in ChordType) {
+                var opt = document.createElement('option');
+                opt.value = chord;
+                opt.innerHTML = chord;
+                chordInput.appendChild(opt)
+               // alert(chord)
             }
     
         </script>
