@@ -17,6 +17,7 @@
                 <br>+ Patchnotes
                 <br>* UI work in progress
         </p>
+        <div id="grad"></div>
         <style>
             hr { 
                 display: block;
@@ -26,7 +27,16 @@
                 margin-right: auto;
                 border-style: inset;
                 border-width: 1px;
-} 
+            }
+                #grad {
+                     height: 600px; 
+                    background: blue; /* For browsers that do not support gradients */
+                    background: -webkit-linear-gradient(white, tan, blue); /* For Safari 5.1 to 6.0 */
+                    background: -o-linear-gradient(white, tan, blue); /* For Opera 11.1 to 12.0 */
+                    background: -moz-linear-gradient(white, tan, blue); /* For Firefox 3.6 to 15 */
+                    background: linear-gradient(white, tan, blue); /* Standard syntax (must be last) */
+                }
+            
         </style>
         <script> 
 
