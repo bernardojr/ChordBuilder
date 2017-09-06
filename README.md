@@ -9,8 +9,7 @@ To see the code, go to my gitHub repo at github.com/Cheezeiii365/ChordBuilder
 Style/CSS edits are greatly appreciated!
 
 -- Patchnotes --
-<Patchnotes:
-Version 2.4
-+ "How to use"
-+ Patchnotes
+ Version 2.6
++ C, D, E, F, G, A, B, minor scales
++ Code cleaned
 * UI work in progress
