@@ -1,11 +1,11 @@
 <html>
     <body>
-        <select id=KeyInput></select> 
+        <select id=KeyInput></select>
         <select id=ChordInput></select>
         <button onclick="test()">Submit</button>
-        <div id="NoteOutput"></div> 
+        <div id="NoteOutput"></div>
         <p><h1>How to use: </p>
-        <p><h3>This program outputs chords in a selected key. <br> Use the first dropdown menu to select the key, then, use the second one to select the chord. 
+        <p><h3>This program outputs chords in a selected key. <br> Use the first dropdown menu to select the key, then, use the second one to select the chord.
         <br> Click submit and recive the requested chord.</p>
         <hr>
         <p>
@@ -17,7 +17,7 @@
         </p>
         <div id="grad"></div>
         <style>
-            hr { 
+            hr {
                 display: block;
                 margin-top: 0.5em;
                 margin-bottom: 0.5em;
@@ -27,34 +27,34 @@
                 border-width: 1px;
             }
                 #grad {
-                     height: 600px; 
+                     height: 600px;
                     background: blue; /* For browsers that do not support gradients */
                     background: -webkit-linear-gradient(white, tan, blue); /* For Safari 5.1 to 6.0 */
                     background: -o-linear-gradient(white, tan, blue); /* For Opera 11.1 to 12.0 */
                     background: -moz-linear-gradient(white, tan, blue); /* For Firefox 3.6 to 15 */
                     background: linear-gradient(white, tan, blue); /* Standard syntax (must be last) */
                 }
-            
+
         </style>
-        <script> 
+        <script>
 
             function test() {
 
                 var Chord = document.getElementById("ChordInput").value;
 
                 var Scale = document.getElementById("KeyInput").value;
-                
+
                 var Notes = ""
                 for (var index = 0; index < ChordType[Chord].length; index++) {
                     var element = ChordType[Chord][index];
                     Notes += scales[Scale][element-1];
                     Notes += " ";
-            
+
                     document.getElementById("NoteOutput").innerHTML = Notes;
                 }
             }
-    
-    
+
+
             var ChordType = {};
             ChordType["Triad"] = [1, 3, 5];
             ChordType["Second"] = [1, 2];
@@ -70,8 +70,8 @@
             ChordType["6 chord"] = [6, 8, 3];
             ChordType["7 chord"] = [7, 1, 4];
             ChordType["7"] = [1, 3, 5, 7];
-            ChordType["Scale"] = [1, 2, 3, 4, 5, 6, 7, 8]
-        
+            ChordType["Scale"] = [1, 2, 3, 4, 5, 6, 7, 8];
+
             var scales = {};
             scales["C"] = ["C", "D", "E", "F", "G", "A", "B", "C"];
             scales["Cm"] = ["C", "D", "Eb", "F", "G", "A", "B", "C"]
@@ -87,7 +87,7 @@
             scales["Am"] = ["A", "B", "C", "D", "E", "F#", "G#", "A"];
             scales["B"] = ["B", "C#", "D#", "E", "F#", "G#", "A#", "B"];
             scales["Bm"] = ["B", "C#", "D", "E", "F#", "G#", "A#", "B"];
-            
+
 
 
             var keyInput = document.getElementById("KeyInput");
@@ -106,7 +106,7 @@
                 chordInput.appendChild(opt)
                // alert(chord)
             }
-    
+
         </script>
     </body>
 </html>
