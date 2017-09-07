@@ -4,6 +4,7 @@
         <select id=ChordInput></select>
         <button onclick="test()">Submit</button>
         <div id="NoteOutput"></div>
+        <div id="ChordOutput"></div>
         <p><h1>How to use: </p>
         <p><h3>This program outputs chords in a selected key. <br> Use the first dropdown menu to select the key, then, use the second one to select the chord.
         <br> Click submit and recive the requested chord.</p>
@@ -52,6 +53,10 @@
 
                     document.getElementById("NoteOutput").innerHTML = Notes;
                 }
+
+                document.getElementById("ChordOutput").innerHTML = ChordType[Chord];
+
+
             }
 
 
